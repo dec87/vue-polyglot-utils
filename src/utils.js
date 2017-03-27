@@ -4,8 +4,8 @@ function trimAndExtractString(string) {
     .replace(/(^['|"]|['|"]$)/gm, '');
 }
 
-export default {
-  extractLocales(string){
+module.exports = {
+  extractLocales: function(string){
     const locales = {};
     const translateMethodRegex = /\$t\(([\S\s]+?)\)/g;
     let match = translateMethodRegex.exec(string);

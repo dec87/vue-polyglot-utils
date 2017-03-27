@@ -29,11 +29,5 @@
   "devDependencies": {
     "ava": "^0.18.2",
     "husky": "^0.13.3"
-  },
-  "ava": {
-    "require": ["babel-register"]
-  },
-  "babel": {
-    "presets": ["@ava/stage-4"]
   }
 }
