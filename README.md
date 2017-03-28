@@ -2,7 +2,7 @@
 
 > utils for Vue-Polyglot
 
-## Vue-Polyglot-Utils v0.1.0
+## Vue-Polyglot-Utils
 
 ## Installation
 
@@ -12,12 +12,18 @@
 
 return the locales parsed in string
 
-    import {extractLocales} from 'vue-polyglot-utils';
-    
+    const parser = require('vue-polyglot-utils');    
+
     const string = "{{$t('test')}}";
     parser.extractLocales(string) // {"test": "test"}
 
 ## example
+
+install walk
+
+    npm install --save-dev walk
+
+create `buildI18n.js` file
 
     const walk = require('walk');
     const fs = require('fs');
@@ -60,7 +66,11 @@ return the locales parsed in string
       });
     });
 
+update `SOURCES_DIR`, `I18N_DIR` and `LANGUAGES_AVAILABLE` in `buildI18n.js`
 
+run file
+
+    node buildI18n.js
 
 ## License
 
