@@ -7,7 +7,7 @@ function trimAndExtractString(string) {
 module.exports = {
   extractLocales: function(string){
     const locales = {};
-    const translateMethodRegex = /\$t\(([\S\s]+?)\)/g;
+    const translateMethodRegex = /\$t\(\'(((?!\'\)).)+)\'\)/g;
     let match = translateMethodRegex.exec(string);
     while (match !== null) {
       const translateMethodParams = match[1].split(/['|"]\s*,/g);
